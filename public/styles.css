@@ -5,10 +5,16 @@ html {
   padding: 0;
   display: flex;
   flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
 }
 
 .chat {
   padding-top: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 #root {
@@ -18,16 +24,23 @@ html {
   justify-content: flex-end;
   overflow-y: auto;
   height: 100%;
-  /* padding: 10px; */
+  padding: 10px;
+  background-color: #1e1e1e; /* Slightly lighter dark */
+  border-radius: 8px;
 }
 
 .message {
   margin-bottom: 10px;
+  padding: 10px;
+  background-color: #292929;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .message .user {
   font-weight: bold;
   text-align: right;
+  color: #81c784; /* Soft green */
 }
 
 .message .remove {
@@ -35,17 +48,37 @@ html {
   width: 22px;
   height: 20px;
   left: -60px;
-  /* display: "block", */
   display: none;
   padding: 0;
   line-height: 18px;
-  border: "none";
+  border: none;
+  background: none;
+  color: #ccc;
 }
 
 .send-message {
-  padding: 0;
+  padding: 0 16px;
+  background-color: #81c784;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.send-message:hover {
+  background-color: #66bb6a;
+}
+
+.my-input-text {
+  background-color: #333;
+  color: #eee;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
 }
 
 .my-input-text::placeholder {
-  color: #ccc;
+  color: #aaa;
 }
